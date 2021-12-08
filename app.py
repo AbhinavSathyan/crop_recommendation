@@ -1,11 +1,11 @@
 #import libraries
-
+st.balloons()
 import streamlit as st
 
 #matplotlib.use('Agg')
 
 import pickle
-st.balloons()
+
 st.set_option('deprecation.showPyplotGlobalUse', False)
 st.title("Crop Recommendation")
 pickle_in = open('RandomForest.pkl', 'rb')
@@ -28,13 +28,13 @@ p = st.number_input('Phosphorous',5,100)
 
 po = st.number_input('Pottasium',5,100)
 
-ph = st.number_input('ph level',5,100)
+ph = st.number_input('ph level',5,15)
 
 r = st.number_input('Rainfall (in mm)',5,100)
 
-temp = st.number_input('Normal Temperature',5,100)
+temp = st.number_input('Normal Temperature (°C)',5,100)
 
-h = st.number_input('Average Humidity',5,100)
+h = st.number_input('Average Humidity (%rh)',5,100)
 #st.write("You are in level",level)
 import datetime,time
 today = st.date_input("Expected time",datetime.datetime.now())
