@@ -1,5 +1,5 @@
 #import libraries
-st.balloons()
+
 import streamlit as st
 
 #matplotlib.use('Agg')
@@ -45,3 +45,4 @@ if submit:
     prediction = classifier.predict([[n,p,po,temp,h,ph,r]])
     st.write('Most suitable crop will be : ')
     st.success(prediction)
+    st.balloons()
